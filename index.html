@@ -18,7 +18,7 @@
         <form id="form">
             
             <input type="text" name="number" placeholder='ex: 55 51 989045330'>
-            <input type="submit" value="Buscar" onclick="click()">
+            <input type="submit" value="Buscar">
         </form>
         <ol>
             <li>Digite um número</li>
@@ -37,9 +37,8 @@
             var button = document.getElementById('whats')
             var baseURL = document.querySelector('#whats').href= `https://api.whatsapp.com/send?phone=${telefone}&text=${msg}`
 
-            button
-                .addEventListener("mousedown", function click() {
-                    window.open(baseURL)
+            button.addEventListener("mousedown", function click() {
+                window.open(baseURL)
             })
         }
     </script>
