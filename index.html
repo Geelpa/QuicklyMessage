@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://web.whatsapp.com/img/favicon_c5088e888c97ad440a61d247596f88e5.png" type="image/png">
+    <title>Quickly Message</title>
+</head>
+<body>
+    <div class="background" ></div>
+
+        <h1>    </h1>
+            <button id="whats" >
+                <img src="wp-icon.svg" alt="" srcset="">
+            </button>
+    <div id="frame">
+        <form id="form">
+            
+            <input type="text" name="number" placeholder='ex: 55 51 989045330'>
+            <input type="submit" value="Buscar" onclick="click()">
+        </form>
+        <ol>
+            <li>Digite um número</li>
+            <li>Clique em buscar</li>
+            <li>Clique no ícone do WhatsApp</li>
+        </ol>
+    </div>
+    <script>
+        const form = document.getElementById('form')
+        form.onsubmit = function(event) {
+            event.preventDefault()
+            const number = form.number.value
+
+            var msg = "Olá!"
+            var telefone = number
+            var button = document.getElementById('whats')
+            var baseURL = document.querySelector('#whats').href= `https://api.whatsapp.com/send?phone=${telefone}&text=${msg}`
+
+            button
+                .addEventListener("mousedown", function click() {
+                    window.open(baseURL)
+            })
+        }
+    </script>
+</body>
+</html>
