@@ -12,8 +12,7 @@
     <img src="wp-icon.svg" alt="" srcset="">
     <div id="frame">
         <form id="form">
-            
-            <input type="text" name="number" placeholder='ex: 55 51 989045330'>
+            <input type="number" name="number" placeholder='ex: 55 51 989045330' required>
             <input type="submit" value="Buscar" id="whats">
         </form>
         <ol>
@@ -29,12 +28,9 @@
 
             var msg = "Olá!"
             var telefone = number
-            var button = document.getElementById('whats')
+            
             var baseURL = document.querySelector('#whats').href= `https://api.whatsapp.com/send?phone=${telefone}&text=${msg}`
-
-            button.addEventListener("mousedown", function click() {
                 window.open(baseURL)
-            })
         }
     </script>
 </body>
