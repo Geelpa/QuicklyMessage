@@ -13,24 +13,22 @@ body {
     background-image: url("./bg-img.png");
 }
 
-
-button {
+img {
     margin-top: 10px;
     outline: none;
     
     opacity: 1;
 
     background: none;
-    cursor: pointer;
     border: none;
-    width: 22rem;
+    width: 16rem;
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-
 }
+
 #frame{
     position: fixed;
     top: 50%;
@@ -44,16 +42,19 @@ button {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 550;
 }
+
 form{
     margin: 8px 16px;
 
 }
+
 ol{
-    margin-left: 32px;
+    margin-left: 40px;
     text-align: left;
     font-size: 1.2rem;
 
 }
+
 form input {
     font-size: 1.4rem;
 
@@ -62,33 +63,18 @@ form input {
     border: none;
     
 }
+
 form input[type=submit] {
     margin-left: auto;
 }
 
-
 @media (max-width: 768px) {
     html, body {
         font-size: 2rem;
+        transform: scale(1.5)
     }
     #frame {
-        width: 40rem;
-        height: 22rem;
+        width: 80%;
     }
     
-    ol{
-        margin-left: 32px;
-        text-align: left;
-        font-size: 4rem;
-
-    }
-    form input {
-        font-size: 4rem;
-        padding: 8px;
-        border-radius: 4px;
-        border: none;
-    }
-    form input[type=submit] {
-        margin-left: auto;
-    }
 }
